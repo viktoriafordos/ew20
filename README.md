@@ -3,7 +3,7 @@ Prototype implementation of the security analysis introduced in V. Fördős: Sec
 
 ```
 ACM Reference Format:
-Viktória Fördős. 2020. Secure Design and Verification of Erlang Systems. In Proceedings of the 19th ACM SIGPLAN International Workshop on Erlang (Erlang ’20), August 23, 2020, Virtual Event, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/ 3406085.3409011
+Viktória Fördős. 2020. Secure Design and Verification of Erlang Systems. In Proceedings of the 19th ACM SIGPLAN International Workshop on Erlang (Erlang ’20), August 23, 2020, Virtual Event, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3406085.3409011
 ```
 
 ## Disclaimer
