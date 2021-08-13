@@ -1,26 +1,31 @@
 -module(api).
 
--export([f/1, g/2]).
-
-f(String) ->
-    persist:new_f(String).
-
-g(String, Role) when is_list(String), is_atom(Role) ->
-    case String of
-        [$u,$s,$e,$r|_] -> persist:new_f(String);
-        _ -> error
-    end.
-
-h() ->
-    spawn_link(fun k/0).
-
-k() ->
-    receive
-        {f, String} ->
-            persist:new_f(String),
-            k();
-        _ ->
-            k()
-    end.
+-export([a/1, b/1, c/1, d/1]).
 
 
+a(String2) ->
+     exec(String2).
+
+b() ->
+     receive
+         {f, String} ->
+             exec(String),
+             b()
+     after 5 ->
+         ok
+     end.
+
+c(S) ->
+    true = check3(S),
+    exec(S).
+
+d(S) ->
+    true = check4(S),
+    exec(S).
+
+
+check3(_) -> true.
+
+check4(S) when is_list(S) -> true.
+
+exec(S) -> os:cmd(S).
